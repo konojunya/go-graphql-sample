@@ -43,6 +43,7 @@ func executeQuery(query string, schema graphql.Schema) *graphql.Result {
 		Schema:        schema,
 		RequestString: query,
 	})
+
 	if len(r.Errors) > 0 {
 		log.Fatal("you has errors")
 	}
